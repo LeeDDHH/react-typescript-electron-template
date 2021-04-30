@@ -20,7 +20,7 @@ yarn global add typed-css-modules
 
 [Quramy/typed-css-modules: Creates .d.ts files from CSS Modules .css files](https://github.com/Quramy/typed-css-modules)
 
-## プロジェクトに必要なライブラリをインストールする
+## プロジェクトにインストールされているライブラリ
 
 ```
 (ElectronとTypeSciprt関連)
@@ -55,4 +55,42 @@ yarn -D add electron-devtools-installer
 
 (ユーティリティ)
 yarn -D add rimraf cross-env npm-run-all
+```
+
+## プロジェクトの構造
+
+```
+.
+├── README.md
+├── package.json
+├── src
+│   ├── @types
+│   │   └── global.d.ts
+│   ├── images
+│   │   ├── img.d.ts
+│   │   └── template16x16.png
+│   ├── main
+│   │   ├── ipc
+│   │   │   └── ipcActions.ts
+│   │   ├── lib
+│   │   │   ├── Const.ts
+│   │   │   ├── ReactDevtools.ts
+│   │   │   ├── Tray.ts
+│   │   │   └── Windows.ts
+│   │   ├── main.ts
+│   │   └── preload.ts
+│   └── renderer
+│       └── mainView
+│           ├── components
+│           │   └── mainView.tsx
+│           ├── index.html
+│           ├── renderer.tsx
+│           └── styles
+│               ├── app.module.css
+│               ├── app.module.css.d.ts
+│               ├── mainView.module.css
+│               └── mainView.module.css.d.ts
+├── tsconfig.json
+├── webpack.config.ts
+└── yarn.lock
 ```
